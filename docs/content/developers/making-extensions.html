@@ -1,0 +1,61 @@
+                    <!-- Making Extensions -->
+                    <article class="doc-article">
+                        <header class="article-header">
+                            <h1 id="making-extensions">Making Extensions</h1>
+                            <p class="article-meta">
+                                <span>Last updated: July 28, 2025</span>
+                                <span>3 min read</span>
+                            </p>
+                        </header>
+
+                        <div class="article-content">       
+                            <h2>Introduction</h2>
+                            <p>
+                                Extensions is a way to reduce bloat, and to allow adaptations to the application without modifying the core.
+                            </p>
+                            <p>
+                                In this way people  themselves can choose what features they want, instead of developing an application that is tailored just for a minority of users. For instance, if you want a new mode in the application, you can create an extension to add it, without worrying about messing up the core application.
+                            </p>
+                            <p>
+                                The extensions are isolated from the core, and are loaded dynamically at runtime. This means the application is not directly affected by the extensions, they are layed on top and will be ejected if it fails one of the criteria.
+                            </p>
+                            <p>
+                                The laws the application must follow to avoid ejection:
+                                <ul>
+                                    <li>Must not bypass set security limits: The application will be ejected if it exceeds the set security limits.</li>
+                                    <li>Must not bypass set performance limits: The application will be ejected if it exceeds the set performance limits.</li>
+                                    <li>Must not bypass set memory limits: The application will be ejected if it exceeds the set memory limits.</li>
+                                    <li>Must not bypass set CPU limits: The application will be ejected if it exceeds the set CPU limits.</li>
+                                    <li>Must not bypass set disk limits: The application will be ejected if it exceeds the set disk limits.</li>
+                                </ul>
+                                <p>
+                                    An ejection is a necessary failsafe to protect the core if an extension is failing, for instance if it is using too much memory or writing to much to the disk. These are indications that something is not working as expected. To avoid any damage, the extension will be ejected and the user will be notified.
+                                </p>
+                                
+                                <p>
+                                    Normally ejections are not a problem, sometimes you can just restart the application and it will be fine. However, if this is not the case then it is most likely a issue within the extension.
+                                </p>
+                            </p>
+                            <h2>How They Work</h2>
+                            <p>
+                                Extensions is built using Avalonia C#, the same as the core. This means that you can use the same tools and libraries to build your extension.
+                            </p>
+                            <p>TBA</p>
+                        </div>
+
+                            
+                            <div class="article-feedback">
+                                <p>Was this helpful?</p>
+                                <div class="feedback-buttons">
+                                    <button class="feedback-btn positive">
+                                        <i class="ti ti-thumb-up"></i>
+                                        Yes
+                                    </button>
+                                    <button class="feedback-btn negative">
+                                        <i class="ti ti-thumb-down"></i>
+                                        No
+                                    </button>
+                                </div>
+                            </div>
+                        </footer>
+                    </article>
